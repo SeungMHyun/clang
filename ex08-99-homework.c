@@ -31,7 +31,7 @@
   ***
    *
 
-*/
+
 #include <stdio.h>
 
 int main(void)
@@ -50,7 +50,7 @@ int main(void)
         5 ******
         6 *******
   
-        */
+    
 
 
         for (int j = 0; j < i+1; j++)
@@ -60,5 +60,33 @@ int main(void)
         printf("\n");
     }
 
+    return 0;
+}
+
+   *        1번째   공백 3개 * 공백 3개
+  ***       2번째   공백 2개 ** 공백 2개
+ *****      3번째   공백 1개 *** 공백 1개
+*******     4번째   공백 0개
+ *****      5번째   공백 1개 *** 공백 1개
+  ***       6번째   공백 2개 ** 공백 2개
+   *        7번째   공백 3개 * 공백 3개
+*/
+
+#include <stdio.h>
+
+int main(void)
+{
+    for(int i = 0 ; i < 7 ; i ++)
+    {
+        if( i < 5)
+        {
+            for(int j = 0 ; j < (4-i) ; j ++)
+                printf(" ");
+            for(int k = 0 ; k < (2*i-1) ; k++)
+                printf("*");
+        }
+
+        printf("\n");
+    }
     return 0;
 }
